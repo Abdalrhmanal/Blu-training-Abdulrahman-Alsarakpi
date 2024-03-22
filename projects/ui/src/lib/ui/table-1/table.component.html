@@ -1,0 +1,30 @@
+<main class="main">
+  <div class="container">
+    <!-- استخدمتclass="table table-hover" لتعريف الأسلوب لتغيير لون الخلفية عند التحويم (hover) على السطر -->
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Email</th>
+            <th scope="col">Work</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- استخدم *ngFor لإنشاء صفوف الجدول -->
+        <tr *ngFor="let item of items; let i = index">
+          <!-- استخدم i + 1 لإظهار رقم الصف -->
+          <td scope="row">{{ i + 1 }}</td>
+          <!-- عرض بيانات كل عنصر -->
+          <td>{{ item.First }}</td>
+          <td>{{ item.Last }}</td>
+          <td>{{ item.age }}</td>
+          <td>{{ item.Email }}</td>
+          <td>{{ item.Work }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>

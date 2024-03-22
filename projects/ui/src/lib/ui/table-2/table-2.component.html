@@ -1,0 +1,28 @@
+<main class="main">
+  <div class="container">
+    <!-- استخدمتclass="table table-hover" لتعريف الأسلوب لتغيير لون الخلفية عند التحويم (hover) على السطر -->
+    <table class="table table-hover">
+      <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Email</th>
+            <th scope="col">Work</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ngFor : هي تقنية من اجل فرش عناصر المصفوفة  -->
+        <tr *ngFor="let item of items; let i = index">
+          <td scope="row">{{ i + 1 }}</td>
+          <td>{{ item.First }}</td>
+          <td>{{ item.Last }}</td>
+          <td>{{ item.age }}</td>
+          <td>{{ item.Email }}</td>
+          <td>{{ item.Work }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
